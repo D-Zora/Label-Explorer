@@ -1,0 +1,15 @@
+{
+  "name": "label-explorer",
+  "version": "1.0.0",
+  "description": "基于 Electron 的 YOLO 标签分析与整合工具",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zeng Yifu(曾逸夫), Deng Yihua(邓乙华)",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "electron": "^28.2.1"
+  }
+}

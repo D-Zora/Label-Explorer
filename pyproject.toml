@@ -1,0 +1,50 @@
+# 🚀 Label Explorer, GPL-3.0 license
+# 基于 Electron 的 YOLO 标签分析与整合工具 (Python CLI版)
+
+
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "label-explorer"
+version = "v0.0.3-alpha01"
+requires-python = ">=3.8"
+description = "基于 Electron 的 YOLO 标签分析与整合工具 (Python CLI版)"
+readme = "README.md"
+license = { "text" = "GPL-3.0" }
+keywords = ["Electron", "YOLO", "labels", "images"]
+authors = [
+    { name = "曾逸夫 Zeng Yifu"},
+    { name = "邓乙华 Deng Yihua" }
+]
+maintainers = [
+    { name = "曾逸夫 Zeng Yifu" },
+    { name = "邓乙华 Deng Yihua" }
+]
+dependencies = [
+    "opencv-python>=4.9.0.80",
+    "click>=8.1.7",
+    "pyscript>=0.2.5",
+    "black>=24.1.1",
+    "isort>=5.13.2",
+    "mdformat>=0.7.17",
+    "rich==12.6.0",
+]
+
+
+[project.scripts]
+label-explorer = "label_explorer_cli.label_explorer:entrypoint"
+
+
+[project.urls]
+"Bug Reports" = "https://gitee.com/intelligence-vision/label-explorer/issues"
+"Funding" = "https://gitee.com/intelligence-vision"
+"Source" = "https://gitee.com/intelligence-vision/label-explorer"
+
+
+[tool.setuptools]
+packages = { find = { where = ["."], include = ["label_explorer_cli", "label_explorer_cli.*"]} }
+package-data = { "label_explorer_cli" = ["**/*.css"] }
+
